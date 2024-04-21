@@ -34,13 +34,6 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
 GlobalJobFilters.Filters.Add(new AutomaticRetryAttribute { Attempts = 5 });
-builder.Services.AddHangfire(configuration =>
-    configuration.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
-        .UseSimpleAssemblyNameTypeSerializer()
-        .UseRecommendedSerializerSettings()
-        .UseSQLiteStorage(builder.Configuration.GetConnectionString("SqliteConnection").Replace("Filename=", "").Replace("data source=", "")));
-
-builder.Services.AddHangfireServer();
 
 builder.Services.AddControllersWithViews().AddNewtonsoftJson(options =>
 {
@@ -51,6 +44,15 @@ builder.Services.AddDbContext<SteamPyDbContext>(options =>
     var connectionStr = builder.Configuration.GetConnectionString("SqliteConnection");//�����������appsettings.json������ӵ����ݿ����Ӵ�
     options.UseSqlite(connectionStr);
 });
+
+builder.Services.AddHangfire(configuration =>
+    configuration.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+        .UseSimpleAssemblyNameTypeSerializer()
+        .UseRecommendedSerializerSettings()
+        .UseSQLiteStorage(builder.Configuration.GetConnectionString("SqliteConnection").Replace("Filename=", "").Replace("data source=", "")));
+
+builder.Services.AddHangfireServer();
+
 
 
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
