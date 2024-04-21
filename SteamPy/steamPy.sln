@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "steamPy", "steamPy.csproj", "{CC587BFB-552D-43EB-AC1B-EEDA16BA3651}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SteamPy.SDK", "..\SteamPy.SDK\SteamPy.SDK.csproj", "{65FDDDDC-A194-4C57-BCD0-52B2B0D134C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC587BFB-552D-43EB-AC1B-EEDA16BA3651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC587BFB-552D-43EB-AC1B-EEDA16BA3651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC587BFB-552D-43EB-AC1B-EEDA16BA3651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC587BFB-552D-43EB-AC1B-EEDA16BA3651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FDDDDC-A194-4C57-BCD0-52B2B0D134C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FDDDDC-A194-4C57-BCD0-52B2B0D134C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FDDDDC-A194-4C57-BCD0-52B2B0D134C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FDDDDC-A194-4C57-BCD0-52B2B0D134C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A528645A-A838-421D-9FC3-C7976192E43C}
+	EndGlobalSection
+EndGlobal
