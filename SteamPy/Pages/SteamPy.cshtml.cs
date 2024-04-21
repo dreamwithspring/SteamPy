@@ -149,7 +149,7 @@ namespace steamPy.Pages
             }
             var allGames = await _steamPyServices.GetDbAllGamePriceInfoMaxAsync();
             _cache.Set(nameof(CacheKey.Ch_GameList), games);
-            return new JsonResult(new {result = games.Result, total = games.Total,size = games.Size,current = games.Current });
+            return new JsonResult(new {result = games.Result, total = games.Total,size = games.Size,current = games.Current+1 });
         }
 
         public async Task<IActionResult> OnPostLogin(string userName, string password)
